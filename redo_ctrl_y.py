@@ -2,7 +2,6 @@ from gi.repository import GObject, Gtk, Gedit, Gio
 
 class ExampleAppActivatable(GObject.Object, Gedit.AppActivatable):
     app = GObject.property(type=Gedit.App)
-    window = GObject.property(type=Gedit.Window)
     __gtype_name__ = "RedoCtrlYAppActivatable"
 
     def __init__(self):
