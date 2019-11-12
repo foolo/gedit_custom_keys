@@ -1,4 +1,4 @@
-from gi.repository import GObject, Gtk, Gedit, Gio
+from gi.repository import GObject, Gedit
 
 class ExampleAppActivatable(GObject.Object, Gedit.AppActivatable):
     app = GObject.property(type=Gedit.App)
