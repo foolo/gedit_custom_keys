@@ -18,31 +18,10 @@ class ExampleAppActivatable(GObject.Object, Gedit.AppActivatable):
         self.menu_item = None
 
     def do_activate(self):
-        self._build_menu()
-
-    def _build_menu(self):
-        # Get the extension from tools menu        
-        self.menu_ext = self.extend_menu("tools-section")
-        # This is the submenu which is added to a menu item and then inserted in tools menu.        
-        sub_menu = Gio.Menu()
-        sub_menu_item = Gio.MenuItem.new("Clear Document", 'win.clear_document')
-        sub_menu.append_item(sub_menu_item)
-        self.menu_item = Gio.MenuItem.new_submenu("Example", sub_menu)
-        self.menu_ext.append_menu_item(self.menu_item)
-        # Setting accelerators, now our action is called when Ctrl+Alt+1 is pressed.
-        self.app.set_accels_for_action("win.clear_document", ("<Primary><Alt>1", None))
         self.app.set_accels_for_action("win.redo", ("<Primary>Y", None))
 
     def do_deactivate(self):
-        self._remove_menu()
-
-    def _remove_menu(self):
-        # removing accelerator and destroying menu items
-        self.app.set_accels_for_action("win.dictonator_start", ())
         self.app.set_accels_for_action("win.redo", ())
-        self.menu_ext = None
-        self.menu_item = None
-
 
 class ExampleWindowActivatable(GObject.Object, Gedit.WindowActivatable, PeasGtk.Configurable):
     window = GObject.property(type=Gedit.Window)
