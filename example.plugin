@@ -1,0 +1,12 @@
+# For more info visit the article https://theawless.github.io/How-to-write-plugins-for-gedit/
+# This file needs to be placed like ~/.local/share/gedit/plugins/example.plugin
+
+[Plugin]
+Loader=python3
+Module=example
+IAge=3
+Name=Example
+Icon=example
+Description=An example plugin which clears the document.
+Authors= theawless <theawless@gmail.com>
+Copyright=Copyright © 2016 theawless <theawless@gmail.com>
