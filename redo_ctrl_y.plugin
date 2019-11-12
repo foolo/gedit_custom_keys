@@ -4,3 +4,4 @@ Module=redo_ctrl_y
 IAge=3
 Name=RedoCtrlY
 Description=Add Ctrl+Y shortcut for redo
+Authors=Olof Andersson
