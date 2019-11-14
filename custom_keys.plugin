@@ -1,0 +1,7 @@
+[Plugin]
+Loader=python3
+Module=custom_keys
+IAge=3
+Name=Custom Keyboard Shortcuts
+Description=Custom Keyboard Shortcuts plugin
+Authors=Olof Andersson
