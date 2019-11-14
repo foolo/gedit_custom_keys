@@ -9,6 +9,9 @@ class ExampleAppActivatable(GObject.Object, Gedit.AppActivatable):
 		# "<Primary>" normally corresponds to Ctrl key
 		# Additional action names can be found in https://github.com/GNOME/gedit/blob/mainline/gedit/resources/gtk/menus-common.ui
 
+		# List all actions by uncommenting the line below and run gedit from the command line
+		# print(self.app.list_action_descriptions())
+
 		self.add_keyboard_shortcut("win.redo", "<Primary>Y")
 		self.add_keyboard_shortcut("win.goto-line", "<Primary>G")
 		#self.add_keyboard_shortcut("app.new-window", "<Primary>N")
