@@ -42,6 +42,8 @@ class ExampleAppActivatable(GObject.Object, Gedit.AppActivatable):
 		#self.add_keyboard_shortcut("win.previous-document", "<Primary><Alt>Page_Up")
 		#self.add_keyboard_shortcut("win.next-document", "<Primary><Alt>Page_Down")
 
+		# Note: Some shortcuts, such as Ctrl+D for delete line are hard-coded in function gedit_view_class_init in gedit-view.c
+
 	def do_deactivate(self):
 		self.app.set_accels_for_action("win.redo", ())
 
