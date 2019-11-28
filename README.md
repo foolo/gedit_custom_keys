@@ -69,7 +69,7 @@ win.wrap-mode
 
 # Notes
 
-Some shortcuts, such as Ctrl+D for delete line are hard-coded in function gedit_view_class_init in gedit-view.c
+Some shortcuts, such as Ctrl+D for delete line are hard-coded in function `gedit_view_class_init` in `gedit-view.c`
 
 Additional action names can be found by adding the line below in `custom_keys.py` and run gedit from the command line:
 
