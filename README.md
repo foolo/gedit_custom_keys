@@ -67,7 +67,12 @@ win.use-spaces
 win.wrap-mode
 ```
 
-# Reference
+# Notes
 
-	https://developer.gnome.org/gtk3/stable/GtkApplication.html
-	https://developer.gnome.org/gtk3/stable/gtk3-Keyboard-Accelerators.html
+Some shortcuts, such as Ctrl+D for delete line are hard-coded in function gedit_view_class_init in gedit-view.c
+
+Additional action names can be found by adding the line below in `custom_keys.py` and run gedit from the command line:
+
+	print(self.app.list_action_descriptions())
+
+More additional action names can be found in https://github.com/GNOME/gedit/blob/mainline/gedit/resources/gtk/menus-common.ui
