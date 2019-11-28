@@ -1,8 +1,8 @@
 # Installation
 
-Copy `redo_ctrl_y.plugin` and `redo_ctrl_y.py` to `~/.local/share/gedit/plugins`
+Copy `custom_keys.plugin` and `custom_keys.py` to `~/.local/share/gedit/plugins`
 
-Open gedit and navigate to *Preferences > Plugins* and Activate **RedoCtrlY** plugin
+Open gedit and navigate to *Preferences > Plugins* and Activate **Custom Keyboard Shortcuts** plugin
 
 # Reference
 
