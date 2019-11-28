@@ -7,10 +7,6 @@ class ExampleAppActivatable(GObject.Object, Gedit.AppActivatable):
 	def do_activate(self):
 		#  Uncomment/Comment any of the keyboard shortcuts below and edit as desired
 		# "<Primary>" normally corresponds to Ctrl key
-		# Additional action names can be found in https://github.com/GNOME/gedit/blob/mainline/gedit/resources/gtk/menus-common.ui
-
-		# List all actions by uncommenting the line below and run gedit from the command line
-		# print(self.app.list_action_descriptions())
 
 		self.add_keyboard_shortcut("win.redo", "<Primary>Y")
 		self.add_keyboard_shortcut("win.goto-line", "<Primary>G")
@@ -41,6 +37,12 @@ class ExampleAppActivatable(GObject.Object, Gedit.AppActivatable):
 		#self.add_keyboard_shortcut("win.next-tab-group", "<Primary><Shift><Alt>Page_Down")
 		#self.add_keyboard_shortcut("win.previous-document", "<Primary><Alt>Page_Up")
 		#self.add_keyboard_shortcut("win.next-document", "<Primary><Alt>Page_Down")
+
+
+		# Additional action names can be found by uncommenting the line below and run gedit from the command line:
+		# print(self.app.list_action_descriptions())
+
+		# More additional action names can be found in https://github.com/GNOME/gedit/blob/mainline/gedit/resources/gtk/menus-common.ui
 
 		# Note: Some shortcuts, such as Ctrl+D for delete line are hard-coded in function gedit_view_class_init in gedit-view.c
 
