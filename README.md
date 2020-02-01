@@ -6,19 +6,19 @@ Open gedit and navigate to *Preferences > Plugins* and activate **Custom Keyboar
 
 # Usage
 
-Add or change keyboard shortcuts by uncommenting and editing lines in `~/.local/share/gedit/plugins/custom_keys.py`
-
-By default, two keyboard shortcut settings are active:
+By default, the following additional keyboard shortcuts are active:
 
 **Ctrl+Y** for **Redo**
 
 **Ctrl+G** for **Go to line**
 
-There is also a special class, GEdit3TabSwitch, which enables:
-
 **Ctrl+Tab** for **Next document tab**
 
 **Ctrl+Shift+Tab** for **Previous document tab**
+
+# Customizing
+
+Add or change keyboard shortcuts by uncommenting and editing lines in `~/.local/share/gedit/plugins/custom_keys.py`
 
 Known action names:
 
@@ -82,6 +82,8 @@ Some shortcuts do not work. For example, the following unfortunately has no effe
 self.add_keyboard_shortcut("win.previous-document", "<Ctrl><Shift>Tab")
 self.add_keyboard_shortcut("win.next-document", "<Ctrl>Tab")
 ```
+(There is a special class, GEdit3TabSwitch, which fixes the tab shortcuts instead)
+
 
 Additional action names can be found by adding the line below in `custom_keys.py` and run gedit from the command line:
 
