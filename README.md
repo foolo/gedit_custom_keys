@@ -14,6 +14,12 @@ By default, two keyboard shortcut settings are active:
 
 **Ctrl+G** for **Go to line**
 
+There is also a special class, GEdit3TabSwitch, which enables:
+
+**Ctrl+Tab** for **Next document tab**
+
+**Ctrl+Shift+Tab** for **Previous document tab**
+
 Known action names:
 
 ```
