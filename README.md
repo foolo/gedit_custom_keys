@@ -14,6 +14,8 @@ By default, the following additional keyboard shortcuts are active:
 
 **Ctrl+Y** for **Redo**
 
+**Ctrl+E** for **Delete line(s)**
+
 **Ctrl+G** for **Go to line**
 
 **Ctrl+Tab** for **Next document tab**
