@@ -60,6 +60,21 @@ class GEdit3TabSwitch(GObject.Object, Gedit.WindowActivatable):
 
 	def on_key_press_event(self, window, event):
 		key = Gdk.keyval_name(event.keyval)
+
+		# Ctrl+E - delete line(s)
+		if event.state & Gdk.ModifierType.CONTROL_MASK and key == 'e':
+			print("CTRL+E")
+			doc = self.window.get_active_document()
+			doc.begin_user_action()
+			ins_ln = doc.get_iter_at_mark(doc.get_insert()).get_line()
+			sel_ln = doc.get_iter_at_mark(doc.get_selection_bound()).get_line()
+			it_beg = doc.get_iter_at_line(min(ins_ln, sel_ln))
+			it_end = doc.get_iter_at_line(max(ins_ln, sel_ln))
+			it_end.forward_line()
+			doc.delete(it_beg, it_end)
+			doc.end_user_action()
+
+		# Ctrl+Tab / Ctrl+Shift+Tab
 		if event.state & Gdk.ModifierType.CONTROL_MASK and key in self.KEYS:
 			atab = window.get_active_tab()
 			tabs = atab.get_parent().get_children()
