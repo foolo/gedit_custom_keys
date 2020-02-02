@@ -1,6 +1,10 @@
+# Description
+
+A plugin for Gedit 3.30 and later that adds some common keyboard shortcuts.
+
 # Installation
 
-Copy `custom_keys.plugin` and `custom_keys.py` to `~/.local/share/gedit/plugins`
+Copy `custom_keys.plugin` and `custom_keys.py` to `~/.local/share/gedit/plugins` (Create the directory if it does not exist)
 
 Open gedit and navigate to *Preferences > Plugins* and activate **Custom Keyboard Shortcuts** plugin
 
