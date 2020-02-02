@@ -63,7 +63,6 @@ class GEdit3TabSwitch(GObject.Object, Gedit.WindowActivatable):
 
 		# Ctrl+E - delete line(s)
 		if event.state & Gdk.ModifierType.CONTROL_MASK and key == 'e':
-			print("CTRL+E")
 			doc = self.window.get_active_document()
 			doc.begin_user_action()
 			ins_ln = doc.get_iter_at_mark(doc.get_insert()).get_line()
