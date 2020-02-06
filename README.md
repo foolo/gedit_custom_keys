@@ -83,7 +83,7 @@ win.wrap-mode
 
 Some shortcuts, such as Ctrl+D for delete line are hard-coded in function `gedit_view_class_init` in `gedit-view.c`
 
-Some shortcuts do not work. For example, the following unfortunately has no effect:
+Some shortcuts do not work when added with `add_keyboard_shortcut()`. For example, the following unfortunately has no effect:
 ```
 self.add_keyboard_shortcut("win.previous-document", "<Ctrl><Shift>Tab")
 self.add_keyboard_shortcut("win.next-document", "<Ctrl>Tab")
