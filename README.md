@@ -95,4 +95,4 @@ Additional action names can be found by adding the line below in `custom_keys.py
 
 	print(self.app.list_action_descriptions())
 
-More additional action names can be found in https://github.com/GNOME/gedit/blob/mainline/gedit/resources/gtk/menus-common.ui
+Additional action names can be found in https://github.com/GNOME/gedit/blob/master/gedit/resources/gtk/menus-common.ui.
